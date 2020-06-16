@@ -1,9 +1,10 @@
 // We thank you for showing interest :)
-// I exist on Github at github.com/MovsisyanMher/
+// We exist on Github at github.com/MovsisyanM/
+// Our website: www.movsisyan.info
 
-function Run(){
+function Run() {
     Maxout();
-    
+
     Cast();
     window.requestAnimationFrame(Run);
 }

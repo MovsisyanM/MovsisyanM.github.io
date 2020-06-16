@@ -1,55 +1,57 @@
-const M = (posX, posY, size, color, Qx, Qy, Qz, context) => 
-{
-    const m = 
+// We thank you for showing interest :)
+// We exist on Github at github.com/MovsisyanM/
+// Our website: www.movsisyan.info
+
+const M = (posX, posY, size, color, Qx, Qy, Qz, context) => {
+    const m =
     {
         x: posX,
         y: posY,
         size: size,
         color: color,
-        Qx: Qx,
+        Qx: Qx + Math.PI,
         Qy: Qy,
         Qz: Qz,
         context: context,
-        verts: 
-        [
-            [-3 * size,  3 * size, size *  0.5],    // Left Bottom Front
-            [-3 * size,  3 * size, size * -0.5],    // Left Bottom Back
-              
-            [-4 * size,  2 * size, size *  0.5],    // Left Lower Front
-            [-4 * size,  2 * size, size * -0.5],    // Left Lower Back
- 
-            [-4 * size, -2 * size, size *  0.5],    // Left Upper Front
-            [-4 * size, -2 * size, size * -0.5],    // Left Upper Back
- 
-            [-3 * size, -3 * size, size *  0.5],    // Left Top Front
-            [-3 * size, -3 * size, size * -0.5],    // Left Top Back
+        verts:
+            [
+                [-3 * size, 3 * size, size * 0.5],    // Left Bottom Front
+                [-3 * size, 3 * size, size * -0.5],    // Left Bottom Back
 
-            [0,          0,        size *  0.5],    // Middle Front
-            [0,          0,        size * -0.5],    // Middle Back
+                [-4 * size, 2 * size, size * 0.5],    // Left Lower Front
+                [-4 * size, 2 * size, size * -0.5],    // Left Lower Back
 
-            [3 * size,  -3 * size, size *  0.5],    // Right Top Front
-            [3 * size,  -3 * size, size * -0.5],    // Right Top Back
- 
-            [4 * size,  -2 * size, size *  0.5],    // Right Upper Front
-            [4 * size,  -2 * size, size * -0.5],    // Right Upper Back
-  
-            [4 * size,   2 * size, size *  0.5],    // Right Lower Front
-            [4 * size,   2 * size, size * -0.5],    // Right Lower Back
-  
-            [3 * size,   3 * size, size *  0.5],    // Right Bottom Front
-            [3 * size,   3 * size, size * -0.5],    // Right Bottom Back
+                [-4 * size, -2 * size, size * 0.5],    // Left Upper Front
+                [-4 * size, -2 * size, size * -0.5],    // Left Upper Back
 
-            [3 * size,      -size, size *  0.5],    // Right Uppity Front
-            [3 * size,      -size, size * -0.5],    // Right Uppity Back
+                [-3 * size, -3 * size, size * 0.5],    // Left Top Front
+                [-3 * size, -3 * size, size * -0.5],    // Left Top Back
 
-            [0,          2 * size, size *  0.5],    // Middle Front
-            [0,          2 * size, size * -0.5],    // Middle Back
+                [0, 0, size * 0.5],    // Middle Front
+                [0, 0, size * -0.5],    // Middle Back
 
-            [-3 * size,     -size, size *  0.5],    // Left Uppity Front
-            [-3 * size,     -size, size * -0.5]     // Left Uppity Back
-        ],
-        project: (x, y, z) => 
-        {
+                [3 * size, -3 * size, size * 0.5],    // Right Top Front
+                [3 * size, -3 * size, size * -0.5],    // Right Top Back
+
+                [4 * size, -2 * size, size * 0.5],    // Right Upper Front
+                [4 * size, -2 * size, size * -0.5],    // Right Upper Back
+
+                [4 * size, 2 * size, size * 0.5],    // Right Lower Front
+                [4 * size, 2 * size, size * -0.5],    // Right Lower Back
+
+                [3 * size, 3 * size, size * 0.5],    // Right Bottom Front
+                [3 * size, 3 * size, size * -0.5],    // Right Bottom Back
+
+                [3 * size, -size, size * 0.5],    // Right Uppity Front
+                [3 * size, -size, size * -0.5],    // Right Uppity Back
+
+                [0, 2 * size, size * 0.5],    // Middle Front
+                [0, 2 * size, size * -0.5],    // Middle Back
+
+                [-3 * size, -size, size * 0.5],    // Left Uppity Front
+                [-3 * size, -size, size * -0.5]     // Left Uppity Back
+            ],
+        project: (x, y, z) => {
             // x
             let xRotQz = x * Math.cos(m.Qz) + y * Math.sin(m.Qz);
 
@@ -79,14 +81,12 @@ const M = (posX, posY, size, color, Qx, Qy, Qz, context) =>
         formXYtoPixels: (x, y) => {
             return [x + posX, -y + posY];
         },
-        draw: () => 
-        {
+        draw: () => {
             //#region Vertecies
             context.fillStyle = color;
             context.strokeStyle = color;
             var verticesPixLoc = [];
-            for(let i = 0; i < m.verts.length; i++)
-            {
+            for (let i = 0; i < m.verts.length; i++) {
                 // locations
                 let xyLoc = m.project(m.verts[i][0], m.verts[i][1], m.verts[i][2]);
                 let pixLoc = m.formXYtoPixels(xyLoc[0], xyLoc[1]);
@@ -101,7 +101,7 @@ const M = (posX, posY, size, color, Qx, Qy, Qz, context) =>
 
 
             //#region Edges
-            
+
             m.context.strokeStyle = color;
 
             // Depth Edges
@@ -119,7 +119,7 @@ const M = (posX, posY, size, color, Qx, Qy, Qz, context) =>
             m.context.moveTo(verticesPixLoc[4][0], verticesPixLoc[4][1]);
             m.context.lineTo(verticesPixLoc[5][0], verticesPixLoc[5][1]);
             m.context.stroke();
-            
+
             m.context.beginPath();
             m.context.moveTo(verticesPixLoc[6][0], verticesPixLoc[6][1]);
             m.context.lineTo(verticesPixLoc[7][0], verticesPixLoc[7][1]);
@@ -129,7 +129,7 @@ const M = (posX, posY, size, color, Qx, Qy, Qz, context) =>
             m.context.moveTo(verticesPixLoc[8][0], verticesPixLoc[8][1]);
             m.context.lineTo(verticesPixLoc[9][0], verticesPixLoc[9][1]);
             m.context.stroke();
-            
+
             m.context.beginPath();
             m.context.moveTo(verticesPixLoc[10][0], verticesPixLoc[10][1]);
             m.context.lineTo(verticesPixLoc[11][0], verticesPixLoc[11][1]);
@@ -149,7 +149,7 @@ const M = (posX, posY, size, color, Qx, Qy, Qz, context) =>
             m.context.moveTo(verticesPixLoc[16][0], verticesPixLoc[16][1]);
             m.context.lineTo(verticesPixLoc[17][0], verticesPixLoc[17][1]);
             m.context.stroke();
-            
+
             m.context.beginPath();
             m.context.moveTo(verticesPixLoc[18][0], verticesPixLoc[18][1]);
             m.context.lineTo(verticesPixLoc[19][0], verticesPixLoc[19][1]);
@@ -159,7 +159,7 @@ const M = (posX, posY, size, color, Qx, Qy, Qz, context) =>
             m.context.moveTo(verticesPixLoc[20][0], verticesPixLoc[20][1]);
             m.context.lineTo(verticesPixLoc[21][0], verticesPixLoc[21][1]);
             m.context.stroke();
-            
+
             m.context.beginPath();
             m.context.moveTo(verticesPixLoc[22][0], verticesPixLoc[22][1]);
             m.context.lineTo(verticesPixLoc[23][0], verticesPixLoc[23][1]);
@@ -286,7 +286,7 @@ const M = (posX, posY, size, color, Qx, Qy, Qz, context) =>
             m.context.moveTo(verticesPixLoc[23][0], verticesPixLoc[23][1]);
             m.context.lineTo(verticesPixLoc[1][0], verticesPixLoc[1][1]);
             m.context.stroke();
-            
+
 
             //#endregion Edges
         }

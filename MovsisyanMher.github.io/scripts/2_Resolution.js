@@ -1,3 +1,6 @@
+// We thank you for showing interest :)
+// We exist on Github at github.com/MovsisyanM/
+// Our website: www.movsisyan.info
 
 // const aspect = {
 // 	SuperUltraWide: 3.6,
@@ -24,7 +27,6 @@
 // }
 
 
-const getAspectRatio = () => 
-{
-	return canvas.width/canvas.height;
+const getAspectRatio = () => {
+	return canvas.width / canvas.height;
 }

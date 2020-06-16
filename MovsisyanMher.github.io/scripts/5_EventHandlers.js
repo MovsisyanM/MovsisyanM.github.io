@@ -1,5 +1,6 @@
 // We thank you for showing interest :)
-// We exist on Github at github.com/MovsisyanMher/
+// We exist on Github at github.com/MovsisyanM/
+// Our website: www.movsisyan.info
 
 //#region Event handlers
 
@@ -26,8 +27,7 @@ document.addEventListener("mousedown", onMouse, false);
 
 
 // This gets hoisted
-function onMUpdate(e)
-{
+function onMUpdate(e) {
     Details.dy += (e.pageX - mouseLocation[0]) * 0.0002;
     Details.dx += (e.pageY - mouseLocation[1]) * 0.0002;
 
@@ -37,8 +37,7 @@ function onMUpdate(e)
 
 
 // This gets hoisted
-function onWUpdate(e)
-{
+function onWUpdate(e) {
     // e.deltaY = 3 for wheelup
     // e.deltaY = -3 for wheeldown
     Details.dz += e.deltaY * 0.001
@@ -53,18 +52,14 @@ function onWUpdate(e)
 
 
 // This gets hoisted
-function onMouse(e)
-{
-    if(distance(e.pageX, e.pageY, canvas.width / 2 + 75/2, canvas.height * 0.45 + 75/2) <  50)
-    {
+function onMouse(e) {
+    if (distance(e.pageX, e.pageY, canvas.width / 2 + 75 / 2, canvas.height * 0.45 + 75 / 2) < 50) {
         goto("https://github.com/MovsisyanMher");
     }
-    else if(distance(e.pageX, e.pageY, canvas.width / 2 + 75 * 1.5, canvas.height * 0.45 + 75/2) <  50)
-    {
+    else if (distance(e.pageX, e.pageY, canvas.width / 2 + 75 * 1.5, canvas.height * 0.45 + 75 / 2) < 50) {
         goto("https://www.facebook.com/mher.movsisyan.98");
     }
-    else if(distance(e.pageX, e.pageY, canvas.width / 2 + 75 * 3, canvas.height * 0.45 + 75/2) <  50)
-    {
+    else if (distance(e.pageX, e.pageY, canvas.width / 2 + 75 * 3, canvas.height * 0.45 + 75 / 2) < 50) {
         goto("https://www.instagram.com/movsisyan_mher7/");
     }
 }
