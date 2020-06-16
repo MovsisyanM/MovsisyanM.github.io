@@ -10,6 +10,8 @@ document.addEventListener("mousemove", onMUpdate, false);
 document.addEventListener("wheel", onWUpdate, false);
 // Track clicks
 document.addEventListener("mousedown", onMouse, false);
+// Track Slides
+document.addEventListener("touchmove", onSlide, false);
 
 //document.addEventListener("keydown", onKey, false);
 //
@@ -53,15 +55,24 @@ function onWUpdate(e) {
 
 // This gets hoisted
 function onMouse(e) {
-    if (distance(e.pageX, e.pageY, canvas.width / 2 + 75 / 2, canvas.height * 0.45 + 75 / 2) < 50) {
-        goto("https://github.com/MovsisyanMher");
+    if (distance(e.pageX, e.pageY, canvas.width / 2, canvas.height * 100) < canvas.height * 99.1) {
+        goto("https://github.com/MovsisyanM");
     }
-    else if (distance(e.pageX, e.pageY, canvas.width / 2 + 75 * 1.5, canvas.height * 0.45 + 75 / 2) < 50) {
-        goto("https://www.facebook.com/mher.movsisyan.98");
-    }
-    else if (distance(e.pageX, e.pageY, canvas.width / 2 + 75 * 3, canvas.height * 0.45 + 75 / 2) < 50) {
-        goto("https://www.instagram.com/movsisyan_mher7/");
-    }
+    //else if (distance(e.pageX, e.pageY, canvas.width / 2 + 75 * 1.5, canvas.height * 0.45 + 75 / 2) < 50) {
+    //    goto("https://www.linkedin.com/in/mher-movsisyan-b77592197");
+    //}
+    //else if (distance(e.pageX, e.pageY, canvas.width / 2 + 75 * 3, canvas.height * 0.45 + 75 / 2) < 50) {
+    //    goto("https://www.instagram.com/_movsisyan_m_/");
+    //}
+}
+
+
+function onSlide(e) {
+    Details.dy += (e.touches[0].clientX - mouseLocation[0]) * 0.0002;
+    Details.dx += (e.touches[0].clientY - mouseLocation[1]) * 0.0002;
+
+    // Account the last recorded mouse position
+    mouseLocation = [e.touches[0].clientX, e.touches[0].clientY];
 }
 
 
