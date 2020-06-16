@@ -92,7 +92,7 @@ const M = (posX, posY, size, color, Qx, Qy, Qz, context) => {
                 let pixLoc = m.formXYtoPixels(xyLoc[0], xyLoc[1]);
                 verticesPixLoc.push(pixLoc);
                 m.context.beginPath();
-                m.context.arc(pixLoc[0], pixLoc[1], 5, 0, 2 * Math.PI, false);
+                m.context.arc(pixLoc[0], pixLoc[1], size / 10, 0, 2 * Math.PI, false);
                 m.context.fillStyle = rgba(Theme[1]);
                 m.context.fill();
                 m.context.stroke();

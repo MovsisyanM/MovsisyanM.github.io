@@ -42,7 +42,7 @@ function onMUpdate(e) {
 function onWUpdate(e) {
     // e.deltaY = 3 for wheelup
     // e.deltaY = -3 for wheeldown
-    Details.dz += e.deltaY * 0.001
+    Details.dz += e.deltaY * 0.0016
 }
 
 
@@ -68,8 +68,8 @@ function onMouse(e) {
 
 
 function onSlide(e) {
-    Details.dy += (e.touches[0].clientX - mouseLocation[0]) * 0.0002;
-    Details.dx += (e.touches[0].clientY - mouseLocation[1]) * 0.0002;
+    Details.dy += (e.touches[0].clientX - mouseLocation[0]) * 0.002;
+    Details.dx += (e.touches[0].clientY - mouseLocation[1]) * 0.002;
 
     // Account the last recorded mouse position
     mouseLocation = [e.touches[0].clientX, e.touches[0].clientY];
