@@ -1,6 +1,6 @@
-// We thank you for showing interest :)
-// We exist on Github at github.com/MovsisyanM/
-// Our website: www.movsisyan.info
+// I thank you for showing interest :)
+// I exist on Github at github.com/MovsisyanM/
+// My website: www.movsisyan.info
 
 const notFoundModel = (posX, posY, size, color, Qx, Qy, Qz, context) => {
     const m =
@@ -254,7 +254,7 @@ const notFoundModel = (posX, posY, size, color, Qx, Qy, Qz, context) => {
 
             //#region inter-face
 
-            for (let iFaceInter = 0; iFaceInter < 11; iFaceInter++) {
+            for (let iFaceInter = 0; iFaceInter < 14; iFaceInter++) {
                 m.context.beginPath();
                 m.context.moveTo(verticesPixLoc[iFaceInter][0], verticesPixLoc[iFaceInter][1]);
                 m.context.lineTo(verticesPixLoc[iFaceInter + 14][0], verticesPixLoc[iFaceInter + 14][1]);

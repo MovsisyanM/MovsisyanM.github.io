@@ -1,6 +1,6 @@
-// We thank you for showing interest :)
-// We exist on Github at github.com/MovsisyanM/
-// Our website: www.movsisyan.info
+// I thank you for showing interest :)
+// I exist on Github at github.com/MovsisyanM/
+// My website: www.movsisyan.info
 
 //#region Event handlers
 

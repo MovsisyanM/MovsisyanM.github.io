@@ -1,6 +1,6 @@
-// We thank you for showing interest :)
-// We exist on Github at github.com/MovsisyanM/
-// Our website: www.movsisyan.info
+// I thank you for showing interest :)
+// I exist on Github at github.com/MovsisyanM/
+// My website: www.movsisyan.info
 
 // Get the distance between two points
 const distance = (x, y, x_2, y_2) => {
