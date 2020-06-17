@@ -254,7 +254,7 @@ const notFoundModel = (posX, posY, size, color, Qx, Qy, Qz, context) => {
 
             //#region inter-face
 
-            for (let iFaceInter = 0; iFaceInter < 10; iFaceInter++) {
+            for (let iFaceInter = 0; iFaceInter < 11; iFaceInter++) {
                 m.context.beginPath();
                 m.context.moveTo(verticesPixLoc[iFaceInter][0], verticesPixLoc[iFaceInter][1]);
                 m.context.lineTo(verticesPixLoc[iFaceInter + 14][0], verticesPixLoc[iFaceInter + 14][1]);
@@ -335,7 +335,7 @@ const notFoundModel = (posX, posY, size, color, Qx, Qy, Qz, context) => {
 
             //#region inter-face
 
-            for (let iFaceInter = 28; iFaceInter < 39; iFaceInter++) {
+            for (let iFaceInter = 28; iFaceInter < 40; iFaceInter++) {
                 m.context.beginPath();
                 m.context.moveTo(verticesPixLoc[iFaceInter][0], verticesPixLoc[iFaceInter][1]);
                 m.context.lineTo(verticesPixLoc[iFaceInter + 12][0], verticesPixLoc[iFaceInter + 12][1]);
@@ -424,7 +424,7 @@ const notFoundModel = (posX, posY, size, color, Qx, Qy, Qz, context) => {
 
             //#region inter-face
 
-            for (let iFaceInter = 52; iFaceInter < 65; iFaceInter++) {
+            for (let iFaceInter = 52; iFaceInter < 66; iFaceInter++) {
                 m.context.beginPath();
                 m.context.moveTo(verticesPixLoc[iFaceInter][0], verticesPixLoc[iFaceInter][1]);
                 m.context.lineTo(verticesPixLoc[iFaceInter + 14][0], verticesPixLoc[iFaceInter + 14][1]);

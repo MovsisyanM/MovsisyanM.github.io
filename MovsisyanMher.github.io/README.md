@@ -1,2 +1,0 @@
-# Movsisyan.info
-My website :)

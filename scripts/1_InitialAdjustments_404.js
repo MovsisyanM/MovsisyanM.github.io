@@ -29,7 +29,7 @@ let Details = {
     dy: 0,
     dz: 0,
     airResist: 0.99,
-    size: 0.018
+    size: 0.02
 }
 
 let Device = {
