@@ -31,3 +31,8 @@ let Details = {
     airResist: 0.99,
     size: 0.029
 }
+
+let Device = {
+    phoneLayout: false,
+    bottomTextFontSizer: 1 / 33
+}
