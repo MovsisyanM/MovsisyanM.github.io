@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movsisyan's Portfolio</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+</body>
+
+<script src="scripts/1_InitialAdjustments_404.js"></script>
+<script src="scripts/2_Resolution.js"></script>
+<script src="scripts/3_Helpers.js"></script>
+<script src="scripts/404.js"></script>
+<script src="scripts/4_Cast_404.js"></script>
+<script src="scripts/5_EventHandlers_404.js"></script>
+<script src="scripts/Run.js"></script>
+
+</html>

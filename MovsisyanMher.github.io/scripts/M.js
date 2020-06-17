@@ -93,7 +93,6 @@ const M = (posX, posY, size, color, Qx, Qy, Qz, context) => {
                 verticesPixLoc.push(pixLoc);
                 m.context.beginPath();
                 m.context.arc(pixLoc[0], pixLoc[1], size / 10, 0, 2 * Math.PI, false);
-                m.context.fillStyle = rgba(Theme[1]);
                 m.context.fill();
                 m.context.stroke();
             }
