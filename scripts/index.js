@@ -81,6 +81,8 @@ const rgba = (array) => {
 const Maxout = () => {
   canvas.width = Details.size * 10;
   canvas.height = Details.size * 10;
+
+  canvas.style.left = window.innerWidth - canvas.width / 2;
 };
 
 // Rotates a 2D point about a point
@@ -216,7 +218,8 @@ function onMUpdate(e) {
 function onWUpdate(e) {
   // e.deltaY = 3 for wheelup
   // e.deltaY = -3 for wheeldown
-  Details.dz += e.deltaY * 0.0016;
+
+  Details.dz += (e.deltaY < 0 ? -1 : 1) * 0.01;
 }
 
 function onSlide(e) {

@@ -14,6 +14,7 @@ a {
 hr {
   color: #373737;
   top: 100vh;
+  z-index: 160;
 }
 
 p {
@@ -32,12 +33,11 @@ h6 {
 }
 
 button {
-  min-width: 120px;
+  min-width: 11em;
   min-height: 2em;
   width: 9vw;
   height: 5vh;
-  left: 50vw;
-  translate: -50%;
+  max-height: 2em;
   background: linear-gradient(126deg, #7f7f7f 0%, #5f5f5f 100%);
   position: relative;
   box-shadow: inset 3px 3px 3px 3px rgba(0, 0, 0, 0.33);
@@ -56,7 +56,7 @@ button {
 span {
   position: absolute;
   overflow: hidden;
-  background: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4));
+  background: radial-gradient(rgba(75, 75, 75, 0), rgba(255, 255, 255, 0.4));
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
@@ -75,8 +75,7 @@ span {
   z-index: 10;
   position: sticky;
   top: 1px;
-  left: 50vw;
-  translate: -50% -2vh;
+  justify-self: center;
 }
 
 .screenTall {
@@ -98,6 +97,7 @@ span {
 .section {
   display: grid;
   grid-template-columns: 15% auto 15%;
+  width: 99vw;
 }
 
 .entered {
@@ -107,16 +107,15 @@ span {
 }
 
 #profession {
-  left: 50vw;
   position: relative;
   text-align: center;
-  translate: -50%;
   color: #fff;
   animation: textProfession 0.8s 5.8s ease forwards;
 }
 
 #canvasHolder {
   top: 10px;
+  display: flex;
   background: #fff;
   position: sticky;
   z-index: 9;
@@ -130,13 +129,14 @@ span {
   justify-items: center;
   align-items: center;
   align-content: center;
+  margin: 0 auto;
 }
 
 #canvasTransition {
   height: 10vh;
   z-index: 8;
   position: sticky;
-  top: 15vh;
+  top: calc(15vh - 1px);
   background: rgb(255, 255, 255);
   background: -moz-linear-gradient(
     180deg,
@@ -265,36 +265,12 @@ span {
     color: rgb(37, 37, 37, 0.5);
   }
 }
-@keyframes disappear {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
 @keyframes btnAppear {
   from {
     opacity: 0;
   }
   to {
     opacity: 100%;
-  }
-}
-@keyframes textScroll {
-  from {
-    color: transparent;
-  }
-  to {
-    color: rgb(37, 37, 37, 1);
-  }
-}
-@keyframes imgScroll {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 
@@ -304,58 +280,6 @@ span {
   }
   to {
     stroke-width: 0;
-  }
-}
-
-@keyframes btnSink {
-  0% {
-    box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.33);
-    text-shadow: 0px 0px 0px #000000;
-  }
-  50% {
-    box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.33);
-    text-shadow: 0px 0px 0px #000000;
-    background: linear-gradient(63deg, #7f7f7f 0%, #5f5f5f 100%);
-  }
-  100% {
-  }
-}
-@keyframes coverOff {
-  0% {
-    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.33);
-    text-shadow: 0px 0px 0px #000000;
-    border-width: 0;
-  }
-  50% {
-    box-shadow: 3vw 3vh 3px 3px rgba(0, 0, 0, 0.33);
-    border-width: 3;
-    border-color: #373737;
-    translate: -10vw -5vh;
-  }
-  99% {
-    box-shadow: 3vw 3vh 3px 3px rgba(0, 0, 0, 0.33);
-    border-width: 3;
-    border-color: #373737;
-    translate: -80vw;
-  }
-  100% {
-    visibility: hidden;
-  }
-}
-
-@keyframes ripple {
-  0% {
-    width: 0;
-    height: 0;
-  }
-  50% {
-    width: 10vw;
-    height: 10vw;
-  }
-  100% {
-    width: 20vw;
-    height: 20vw;
-    opacity: 0;
   }
 }
 

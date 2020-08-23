@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <div class="screenTall">
+    <div class="screenTall" id="firstPage">
       <svg
         id="nameSVG"
         viewBox="-5 -5 1275 115"
@@ -92,12 +92,14 @@
         />
       </svg>
       <h3 id="profession">Programmer<br>Data science student</h3>
-      <button>My projects</button>
+      <div style="display: flex; justify-content: center;">
+        <button>My projects</button>
+      </div>
     </div>
 
     <div class="screenTall" id="mainScreen">
+      <hr></hr>
       <div id="canvasHolder">
-        <hr></hr>
         <canvas id="canvas"></canvas>
         <script src="scripts/index.js"></script>
       </div>
