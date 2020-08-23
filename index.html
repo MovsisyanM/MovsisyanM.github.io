@@ -1,28 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Movsisyan's Portfolio</title>
     <style type="text/css">
-        body {
-            margin: 0;
-        }
+      body {
+        margin: 0;
+      }
     </style>
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles/index.css" rel="stylesheet" />
+  </head>
 
-<body>
-    <canvas id="canvas"></canvas>
-</body>
+  <body>
+    <div class="screenTall">
+      <svg
+        id="nameSVG"
+        viewBox="-5 -5 1275 115"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-width="5"
+          d="M90.952 0.759995C93.064 0.759995 94.792 1.47999 96.136 2.91999C97.48 4.26399 98.152 6.03999 98.152 8.24799V96.664C98.152 98.872 97.528 100.6 96.28 101.848C95.128 103.096 93.496 103.72 91.384 103.72C89.368 103.72 87.784 103.096 86.632 101.848C85.48 100.6 84.904 98.872 84.904 96.664V29.704L56.68 83.416C54.856 86.776 52.504 88.456 49.624 88.456C46.744 88.456 44.392 86.776 42.568 83.416L14.2 30.28V96.664C14.2 98.872 13.624 100.6 12.472 101.848C11.32 103.096 9.68803 103.72 7.57603 103.72C5.56003 103.72 3.92803 103.096 2.68003 101.848C1.52803 100.504 0.952026 98.776 0.952026 96.664V8.24799C0.952026 6.03999 1.62403 4.26399 2.96803 2.91999C4.31203 1.47999 6.04003 0.759995 8.15203 0.759995C11.128 0.759995 13.528 2.488 15.352 5.944L49.768 71.752L83.896 5.944C85.72 2.488 88.072 0.759995 90.952 0.759995Z"
+          stroke="#252525"
+        />
+        <path
+          stroke-width="5"
+          d="M200.654 0.759995C202.862 0.759995 204.638 1.47999 205.982 2.91999C207.326 4.26399 207.998 6.03999 207.998 8.24799V96.232C207.998 98.44 207.326 100.264 205.982 101.704C204.638 103.048 202.862 103.72 200.654 103.72C198.446 103.72 196.67 103.048 195.326 101.704C193.982 100.36 193.31 98.536 193.31 96.232V57.496H136.574V96.232C136.574 98.44 135.902 100.264 134.558 101.704C133.214 103.048 131.438 103.72 129.23 103.72C127.022 103.72 125.246 103.048 123.902 101.704C122.558 100.36 121.886 98.536 121.886 96.232V8.24799C121.886 6.03999 122.558 4.26399 123.902 2.91999C125.246 1.47999 127.022 0.759995 129.23 0.759995C131.438 0.759995 133.214 1.47999 134.558 2.91999C135.902 4.26399 136.574 6.03999 136.574 8.24799V45.4H193.31V8.24799C193.31 6.03999 193.982 4.26399 195.326 2.91999C196.67 1.47999 198.446 0.759995 200.654 0.759995Z"
+          stroke="#252525"
+        />
+        <path
+          stroke-width="5"
+          d="M238.918 103C236.614 103 234.79 102.376 233.446 101.128C232.198 99.784 231.574 98.008 231.574 95.8V8.68C231.574 6.472 232.198 4.744 233.446 3.49599C234.79 2.15199 236.614 1.48 238.918 1.48H291.91C294.118 1.48 295.798 2.008 296.95 3.064C298.198 4.12 298.822 5.60799 298.822 7.52799C298.822 9.448 298.198 10.936 296.95 11.992C295.798 12.952 294.118 13.432 291.91 13.432H246.118V45.4H289.03C291.238 45.4 292.918 45.928 294.07 46.984C295.318 48.04 295.942 49.528 295.942 51.448C295.942 53.368 295.318 54.856 294.07 55.912C292.918 56.968 291.238 57.496 289.03 57.496H246.118V91.048H291.91C296.518 91.048 298.822 93.016 298.822 96.952C298.822 98.872 298.198 100.36 296.95 101.416C295.798 102.472 294.118 103 291.91 103H238.918Z"
+          stroke="#252525"
+        />
+        <path
+          stroke-width="5"
+          d="M395.008 93.784C395.872 95.032 396.304 96.376 396.304 97.816C396.304 99.544 395.584 101.032 394.144 102.28C392.8 103.432 391.216 104.008 389.392 104.008C386.704 104.008 384.544 102.808 382.912 100.408L363.616 70.456C361.408 67 359.056 64.6 356.56 63.256C354.064 61.816 350.8 61.096 346.768 61.096H330.496V96.232C330.496 98.536 329.824 100.36 328.48 101.704C327.232 103.048 325.456 103.72 323.152 103.72C320.944 103.72 319.168 103.048 317.824 101.704C316.48 100.36 315.808 98.536 315.808 96.232V8.68C315.808 6.472 316.432 4.744 317.68 3.49599C319.024 2.15199 320.848 1.48 323.152 1.48H359.008C370.24 1.48 378.784 3.97599 384.64 8.96799C390.592 13.96 393.568 21.256 393.568 30.856C393.568 38.824 391.312 45.304 386.8 50.296C382.288 55.192 375.856 58.312 367.504 59.656C370 60.328 372.256 61.528 374.272 63.256C376.288 64.984 378.256 67.384 380.176 70.456L395.008 93.784ZM357.28 49.144C364.768 49.144 370.288 47.704 373.84 44.824C377.488 41.848 379.312 37.288 379.312 31.144C379.312 25 377.536 20.536 373.984 17.752C370.432 14.872 364.864 13.432 357.28 13.432H330.352V49.144H357.28Z"
+          stroke="#252525"
+        />
+        <path
+          stroke-width="5"
+          d="M543.343 0.759995C545.455 0.759995 547.183 1.47999 548.527 2.91999C549.871 4.26399 550.543 6.03999 550.543 8.24799V96.664C550.543 98.872 549.919 100.6 548.671 101.848C547.519 103.096 545.887 103.72 543.775 103.72C541.759 103.72 540.175 103.096 539.023 101.848C537.871 100.6 537.295 98.872 537.295 96.664V29.704L509.071 83.416C507.247 86.776 504.895 88.456 502.015 88.456C499.135 88.456 496.783 86.776 494.959 83.416L466.591 30.28V96.664C466.591 98.872 466.015 100.6 464.863 101.848C463.711 103.096 462.079 103.72 459.967 103.72C457.951 103.72 456.319 103.096 455.071 101.848C453.919 100.504 453.343 98.776 453.343 96.664V8.24799C453.343 6.03999 454.015 4.26399 455.359 2.91999C456.703 1.47999 458.431 0.759995 460.543 0.759995C463.519 0.759995 465.919 2.488 467.743 5.944L502.159 71.752L536.287 5.944C538.111 2.488 540.463 0.759995 543.343 0.759995Z"
+          stroke="#252525"
+        />
+        <path
+          stroke-width="5"
+          d="M617.909 104.152C608.309 104.152 599.957 102.04 592.853 97.816C585.845 93.592 580.421 87.592 576.581 79.816C572.741 72.04 570.821 62.872 570.821 52.312C570.821 41.656 572.693 32.44 576.437 24.664C580.277 16.792 585.749 10.792 592.853 6.66399C599.957 2.43999 608.309 0.327991 617.909 0.327991C627.605 0.327991 636.005 2.43999 643.109 6.66399C650.213 10.792 655.637 16.792 659.381 24.664C663.221 32.44 665.141 41.608 665.141 52.168C665.141 62.728 663.221 71.944 659.381 79.816C655.637 87.592 650.213 93.592 643.109 97.816C636.005 102.04 627.605 104.152 617.909 104.152ZM617.909 92.056C628.085 92.056 636.005 88.6 641.669 81.688C647.333 74.776 650.165 64.936 650.165 52.168C650.165 39.4 647.333 29.608 641.669 22.792C636.101 15.88 628.181 12.424 617.909 12.424C607.829 12.424 599.957 15.88 594.293 22.792C588.725 29.608 585.941 39.4 585.941 52.168C585.941 64.936 588.725 74.776 594.293 81.688C599.957 88.6 607.829 92.056 617.909 92.056Z"
+          stroke="#252525"
+        />
+        <path
+          stroke-width="5"
+          d="M757.14 4.64799C758.388 1.96 760.452 0.615997 763.332 0.615997C765.252 0.615997 766.98 1.288 768.516 2.632C770.052 3.88 770.82 5.416 770.82 7.24C770.82 7.91199 770.58 8.824 770.1 9.976L729.492 98.968C728.82 100.504 727.764 101.704 726.324 102.568C724.884 103.432 723.348 103.864 721.716 103.864C720.084 103.864 718.5 103.432 716.964 102.568C715.524 101.704 714.468 100.504 713.796 98.968L673.332 9.976C672.852 8.824 672.612 7.91199 672.612 7.24C672.612 5.31999 673.38 3.73599 674.916 2.488C676.548 1.24 678.324 0.615997 680.244 0.615997C683.22 0.615997 685.332 1.96 686.58 4.64799L721.86 83.704L757.14 4.64799Z"
+          stroke="#252525"
+        />
+        <path
+          stroke-width="5"
+          d="M815.813 104.152C808.517 104.152 801.557 103.144 794.933 101.128C788.405 99.112 783.173 96.328 779.237 92.776C777.413 91.24 776.501 89.272 776.501 86.872C776.501 85.144 776.981 83.704 777.941 82.552C778.901 81.304 780.053 80.68 781.397 80.68C782.741 80.68 784.373 81.304 786.293 82.552C794.837 88.888 804.581 92.056 815.525 92.056C823.205 92.056 829.109 90.616 833.237 87.736C837.365 84.856 839.429 80.728 839.429 75.352C839.429 71.128 837.509 67.96 833.669 65.848C829.829 63.736 823.685 61.72 815.237 59.8C807.173 58.072 800.549 56.104 795.365 53.896C790.181 51.688 786.101 48.712 783.125 44.968C780.245 41.128 778.805 36.28 778.805 30.424C778.805 24.568 780.389 19.384 783.557 14.872C786.821 10.264 791.333 6.71199 797.093 4.21599C802.853 1.62399 809.429 0.327991 816.821 0.327991C823.637 0.327991 829.925 1.28799 835.685 3.208C841.445 5.12799 846.341 7.96 850.373 11.704C852.293 13.336 853.253 15.304 853.253 17.608C853.253 19.24 852.725 20.68 851.669 21.928C850.709 23.176 849.557 23.8 848.213 23.8C846.965 23.8 845.381 23.176 843.461 21.928C839.045 18.568 834.869 16.168 830.933 14.728C827.093 13.192 822.437 12.424 816.965 12.424C809.573 12.424 803.813 13.96 799.685 17.032C795.557 20.008 793.493 24.184 793.493 29.56C793.493 34.168 795.317 37.672 798.965 40.072C802.613 42.376 808.469 44.488 816.533 46.408C824.981 48.328 831.797 50.344 836.981 52.456C842.261 54.472 846.437 57.304 849.509 60.952C852.677 64.504 854.261 69.112 854.261 74.776C854.261 80.536 852.629 85.672 849.365 90.184C846.197 94.6 841.685 98.056 835.829 100.552C830.069 102.952 823.397 104.152 815.813 104.152Z"
+          stroke="#252525"
+        />
+        <path
+          stroke-width="5"
+          d="M879.886 103.72C877.678 103.72 875.902 103.048 874.558 101.704C873.214 100.36 872.542 98.536 872.542 96.232V8.24799C872.542 6.03999 873.214 4.26399 874.558 2.91999C875.902 1.47999 877.678 0.759995 879.886 0.759995C882.19 0.759995 884.014 1.43199 885.358 2.77599C886.702 4.11999 887.374 5.94399 887.374 8.24799V96.232C887.374 98.536 886.702 100.36 885.358 101.704C884.11 103.048 882.286 103.72 879.886 103.72Z"
+          stroke="#252525"
+        />
+        <path
+          stroke-width="5"
+          d="M944.485 104.152C937.189 104.152 930.229 103.144 923.605 101.128C917.077 99.112 911.845 96.328 907.909 92.776C906.085 91.24 905.173 89.272 905.173 86.872C905.173 85.144 905.653 83.704 906.613 82.552C907.573 81.304 908.725 80.68 910.069 80.68C911.413 80.68 913.045 81.304 914.965 82.552C923.509 88.888 933.253 92.056 944.197 92.056C951.877 92.056 957.781 90.616 961.909 87.736C966.037 84.856 968.101 80.728 968.101 75.352C968.101 71.128 966.181 67.96 962.341 65.848C958.501 63.736 952.357 61.72 943.909 59.8C935.845 58.072 929.221 56.104 924.037 53.896C918.853 51.688 914.773 48.712 911.797 44.968C908.917 41.128 907.477 36.28 907.477 30.424C907.477 24.568 909.061 19.384 912.229 14.872C915.493 10.264 920.005 6.71199 925.765 4.21599C931.525 1.62399 938.101 0.327991 945.493 0.327991C952.309 0.327991 958.597 1.28799 964.357 3.208C970.117 5.12799 975.013 7.96 979.045 11.704C980.965 13.336 981.925 15.304 981.925 17.608C981.925 19.24 981.397 20.68 980.341 21.928C979.381 23.176 978.229 23.8 976.885 23.8C975.637 23.8 974.053 23.176 972.133 21.928C967.717 18.568 963.541 16.168 959.605 14.728C955.765 13.192 951.109 12.424 945.637 12.424C938.245 12.424 932.485 13.96 928.357 17.032C924.229 20.008 922.165 24.184 922.165 29.56C922.165 34.168 923.989 37.672 927.637 40.072C931.285 42.376 937.141 44.488 945.205 46.408C953.653 48.328 960.469 50.344 965.653 52.456C970.933 54.472 975.109 57.304 978.181 60.952C981.349 64.504 982.933 69.112 982.933 74.776C982.933 80.536 981.301 85.672 978.037 90.184C974.869 94.6 970.357 98.056 964.501 100.552C958.741 102.952 952.069 104.152 944.485 104.152Z"
+          stroke="#252525"
+        />
+        <path
+          stroke-width="5"
+          d="M1062.33 3.352C1063.67 1.624 1065.35 0.759995 1067.37 0.759995C1069.1 0.759995 1070.63 1.47999 1071.98 2.91999C1073.42 4.26399 1074.14 5.84799 1074.14 7.67199C1074.14 9.39999 1073.56 10.888 1072.41 12.136L1038.42 54.472V96.232C1038.42 98.632 1037.7 100.504 1036.26 101.848C1034.92 103.096 1033.14 103.72 1030.94 103.72C1028.73 103.72 1026.95 103.096 1025.61 101.848C1024.26 100.504 1023.59 98.632 1023.59 96.232V54.472L989.608 12.136C988.456 10.888 987.88 9.35199 987.88 7.52799C987.88 5.70399 988.552 4.11999 989.896 2.77599C991.24 1.43199 992.824 0.759995 994.648 0.759995C996.568 0.759995 998.248 1.624 999.688 3.352L1031.08 42.808L1062.33 3.352Z"
+          stroke="#252525"
+        />
+        <path
+          stroke-width="5"
+          d="M1164.89 94.36C1165.37 95.512 1165.61 96.472 1165.61 97.24C1165.61 99.064 1164.84 100.6 1163.31 101.848C1161.87 103.096 1160.24 103.72 1158.41 103.72C1157.16 103.72 1155.96 103.384 1154.81 102.712C1153.76 101.944 1152.94 100.888 1152.36 99.544L1142.86 77.944H1090.16L1080.65 99.544C1080.08 100.888 1079.21 101.944 1078.06 102.712C1076.91 103.384 1075.71 103.72 1074.46 103.72C1072.54 103.72 1070.81 103.096 1069.28 101.848C1067.84 100.6 1067.12 99.064 1067.12 97.24C1067.12 96.472 1067.36 95.512 1067.84 94.36L1108.44 5.51199C1109.12 3.976 1110.17 2.776 1111.61 1.91199C1113.15 1.04799 1114.73 0.615997 1116.36 0.615997C1118 0.615997 1119.53 1.04799 1120.97 1.91199C1122.51 2.776 1123.61 3.976 1124.28 5.51199L1164.89 94.36ZM1137.68 66.136L1116.51 18.472L1095.48 66.136H1137.68Z"
+          stroke="#252525"
+        />
+        <path
+          stroke-width="5"
+          d="M1257.39 0.759995C1259.51 0.759995 1261.19 1.47999 1262.43 2.91999C1263.78 4.26399 1264.45 6.03999 1264.45 8.24799V96.232C1264.45 98.44 1263.78 100.264 1262.43 101.704C1261.09 103.048 1259.36 103.72 1257.25 103.72C1254.75 103.72 1252.83 102.76 1251.49 100.84L1195.04 26.392V96.232C1195.04 98.44 1194.37 100.264 1193.03 101.704C1191.78 103.048 1190.1 103.72 1187.99 103.72C1185.87 103.72 1184.19 103.048 1182.95 101.704C1181.7 100.36 1181.07 98.536 1181.07 96.232V8.24799C1181.07 6.03999 1181.75 4.26399 1183.09 2.91999C1184.43 1.47999 1186.16 0.759995 1188.27 0.759995C1190.77 0.759995 1192.69 1.71999 1194.03 3.63999L1250.48 78.232V8.24799C1250.48 6.03999 1251.11 4.26399 1252.35 2.91999C1253.6 1.47999 1255.28 0.759995 1257.39 0.759995Z"
+          stroke="#252525"
+        />
+      </svg>
+      <h3 id="profession">Programmer<br>Data science student</h3>
+      <button>My projects</button>
+    </div>
 
-<script src="scripts/1_InitialAdjustments.js"></script>
-<script src="scripts/2_Resolution.js"></script>
-<script src="scripts/3_Helpers.js"></script>
-<script src="scripts/M.js"></script>
-<script src="scripts/4_Cast.js"></script>
-<script src="scripts/5_EventHandlers.js"></script>
-<script src="scripts/Run.js"></script>
+    <div class="screenTall" id="mainScreen">
+      <div id="canvasHolder">
+        <hr></hr>
+        <canvas id="canvas"></canvas>
+        <script src="scripts/index.js"></script>
+      </div>
+      
+      <div id="canvasTransition"></div>
 
+      <div class="section" id="AboutDiv">
+        <div></div>
+        <div>
+          <article class="article">
+            <h2>About me</h2>
+            <p>
+              Hey there, visitor! Let me introduce myself.<br>
+              My name is Mher and I'm 19 years old. I like tea, potatoes 
+              and learning new things. Besides that, I am a student at the 
+              <a href="https://www.aua.am/" target="_blank">American University of Armenia</a> 
+              majoring in Data Science. I graduated from Yerevan State College of Light 
+              industry, served in the army, and all of that is boring, but 
+              wait until you see what the established Senior Software 
+              Engineers say about me: 
+              <p style="padding: 0 0 0 3em; font-size: large;">"..."</p>
+              Nothing! That's right! I don't have any experience working 
+              with people in my field yet, which is why it is an awesome 
+              opportunity for you to find out what treasures await in my 
+              career and capitalize on them.
+            </p>
+          </article>
+          <div style="margin: 0 0 150px 0;">
+          </div>
+          <article  class="article">
+            <h2>Education</h2>
+            <h5>American University of Armenia</h5>
+            <h6>2018, 2020 - present</h6>
+            <p>
+              At this friendly and unique establishment, I'm able to meet and network 
+              with hundreds of professionals and individuals who are eager to learn 
+              and share new knowledge. I get to explore new perspectives with gen ed courses, 
+              making me familiar with various cultures, sciences, and languages.
+            </p>
+            <p style="font-size: small;"><a href="https://www.aua.am/" target="_blank">Click to visit their website.</a> </p>
+            <h5>Yerevan State College of Light Industry</h5>
+            <h6>2015 - 2018 (graduated)</h6>
+            <p>
+              Learning foundational micro/macroeconomics, sociology, finance, tax law, accounting, 
+              statistics, and marketing allows me to apply my skills to real, competitive environments.
+            </p>
+            <p style="font-size: small;"><a href="https://www.facebook.com/slic1929" target="_blank">Click to visit their page.</a> </p>
+          </article>
+          <div style="margin: 0 0 150px 0;">
+          </div>
+          <article  class="article">
+            <h3>Volunteering</h3>
+            <h5>"Hans Christian Kofoed" Beneficent Foundation</h5>
+            <h6>2016</h6>
+            <p>
+              Volunteered at a homeless shelter to help and encourage the homeless. 
+              Everybody deserves hope and support.
+            </p>
+            <p style="font-size: small;"><a href="https://www.facebook.com/Kofoed-Armenia-118610755525300" target="_blank">Click to visit their page.</a> </p>
+            <h5>Wikimedia Armenia</h5>
+            <h6>2017</h6>
+            <p>
+              Volunteered as a video editor, eternalized pieces of Armenian history 
+              with my camera, helped gather over 25,000 pictures of Armenian monuments, 
+              and played a role in Armenia's participation in the "We Love Monuments" Wikimedia contest.
+            </p>
+            <p style="font-size: small;"><a href="https://www.facebook.com/WikimediaArmenia" target="_blank">Click to visit their page.</a> </p>
+          </article>
+          <div style="margin: 0 0 150px 0;">
+            <a class="projects">sneaky</a>
+          </div>
+          <article  class="article">
+            <h2>Projects</h2>
+            <h5>This website</h5>
+            <h6>2020</h6>
+            <p>
+              Made with JavaScript, Html, CSS, designed by me to let you read this.
+            </p>
+            <article>
+            <h5>"Movsisyan's bot" telegram bot</h5>
+            <h6>2020</h6>
+            <p>
+              A fun little bot who can send you random pictures of dogs, cats, and foxes! 
+              It also possesses the ability to guess your age, gender, nationality, 
+              as well as report the current bitcoin price. This project displays my 
+              ability to find and use various APIs using Python 3. 
+            </p>
+            <p style="font-size: small;"><a href="https://t.me/MovsisyansBot/" target="_blank">@MovsisyansBot</a> </p>
+            </article><article>
+            <h5>"VioletRecon" desktop app</h5>
+            <h6>2019</h6>
+            <p>
+              This desktop application is written in C# and XAML, using only 
+              the .Net library, and the libraries previously made by me as 
+              APIs/drivers for various radio receivers, with no connection 
+              to the internet.  This piece of software allows the user to 
+              automatically detect and record various radio signals, and in
+              practice has been proven to be more than 900% efficient when 
+              compared to manual use with default software.
+            </p>
+            </article><article>
+            <h5>"Vigil" forensics desktop app</h5>
+            <h6>2019</h6>
+            <p>
+              This desktop app is written in C# and helps the user detect and classify 
+              past IO device use. This project helped me get an idea of what it is like 
+              to work with a strict deadline.
+            </p>
+            </article><article>
+            <h5>.Net class libraries for AR5001 and AR2100 radio receivers</h5>
+            <h6>2019</h6>
+            <p>
+              These are class libraries written in C# with no network connection 
+              at the time of writing them, and they are used in the "VioletRecon"
+              project. This provides an easy-to-use interface to work with the 
+              particular radio receivers and build high-level apps.
+            </p>
+            </article><article>
+            <h5>"Beeper" team schedule desktop app</h5>
+            <h6>2019</h6>
+            <p>
+              This little app is a fun and useful tool for scheduling and 
+              maintaining team tasks. It screams out the name of the team 
+              member and their task at a previously specified time. It is 
+              written in C# with no network connection.
+            </p>
+            </article><article>
+            <h5>.Net class library for signal direction finding via DFB1000B</h5>
+            <h6>2019</h6>
+            <p>
+              This is a class library written in C# without a network connection. 
+              The library provides a very simple way to work with and calculate 
+              signal direction data using two radio receivers. This library 
+              proved to be very useful since it allowed higher lever software 
+              to calculate the orientation of the antennae without the use of 
+              a compass, determine where real sources of signals are compared 
+              to reflections from large terrain objects, determine the speed 
+              of a moving radio transmitter.
+            </p>
+            </article><article>
+            <h5>Automated file renamer</h5>
+            <h6>2019</h6>
+            <p>
+              This is a small app written in C# and XAML which allows the user 
+              to rename large amounts of similar files in a specified pattern 
+              and was also developed without an internet connection.
+            </p>
+            </article><article>
+            <h5>Morse code translator</h5>
+            <h6>2019</h6>
+            <p>
+              This app is written in C# without an internet connection. 
+              It takes textual input from the user and converts the text 
+              into morse code. After the conversion, the series of dots 
+              and dashes are emitted as sound waves.
+            </p>
+            <p style="font-size: small;"><a href="https://github.com/MovsisyanM/MorseConsole" target="_blank">Click to visit GitHub repo</a> </p>
+            </article><article>
+            <h5>"Logic cubed" team project</h5>
+            <h6>2018 (Intro to Computer Science final project)</h6>
+            <p>
+              With a team of three, we challenged ourselves, deciding 
+              to build an interactive single-page web app to encourage 
+              the young programmers to solve puzzles and expand their 
+              knowledge of the software world. We built a "Capture the 
+              flag" styled set of puzzles that test the user's understanding 
+              and interpretation of code. This project helped me better 
+              my teamwork skills.
+            </p>
+            <p style="font-size: small;"><a href="https://app.movsisyan.info/LogicCubed/" target="_blank">Click to visit project</a></p>
+            </article><article>
+            <h5>Cube-Js</h5>
+            <h6>2019</h6>
+            <p>
+              The letter "M" that you see at the top of this page is a 
+              modification of this project. The projection of lower-dimensional 
+              components to a higher dimension is absolutely cool, but 
+              what this project suggests is much more, it suggests that 
+              I possess the ability to express math as code.
+            </p>
+            </article><article>
+            <h5>Tax calculator</h5>
+            <h6>2016</h6>
+            <p>
+              This was the first time I created a desktop application. 
+              I used C# and WinForms, this was a project inspired both 
+              by my laziness and by my zest for learning new things. 
+              It was a calculator that did my homework for a year by 
+              calculating the salaries of workers after tax.
+            </p>
+            </article><article>
+            <h5>"Pewds vs Zombers" Videogame</h5>
+            <h6>2014 November</h6>
+            <p>
+              This is the first game I built using C#, UnityScript, 
+              and the Unity game engine. It was built for a 72-hour 
+              game jam, which is an event where thousands of game 
+              developers around the world challenge themselves by 
+              trying to make a fully-fledged game in a short amount 
+              of time around a specified theme. The theme was "fun 
+              to play, fun to watch" and it was around a YouTuber named 
+              PewDiePie who is still the biggest individual on the 
+              YouTube platform. I, at the time, had recently turned 
+              14 and was already trying new things such as coding, 
+              3D modeling, game design, so I made a decision that 
+              changed my life. Inspired by a young game developer 
+              called Nelson Sexton, I said to myself: "He is 16 and 
+              he made an enjoyable and popular game, why should I not 
+              be able to?" After seeing all the positive feedback 
+              from the players of my game and seeing that I liked 
+              coding, I started to learn software engineering.
+            </p>
+            <p style="font-size: small;"><a href="https://gamejolt.com/games/Pewdszombers/39061" target="_blank">Click to visit game page</a></p>
+            </article>
+          </article>
+          <article class="article">
+            <h3>Contact Info and Links</h3>
+            <p>
+              Email: mher@movsisyan.info
+            </p>
+            <p>
+              <a href="https://github.com/MovsisyanM" target="_blank">Go to GitHub</a>
+            </p>
+            <p>
+              <a href="https://www.linkedin.com/in/mher-movsisyan-b77592197/" target="_blank">Go to LinkedIn</a>
+            </p>
+            <p>
+              <a href="https://www.instagram.com/movsisyan_mh/" target="_blank">Go to Instagram</a>
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts/entered.js"></script>
+  </body>
 </html>
