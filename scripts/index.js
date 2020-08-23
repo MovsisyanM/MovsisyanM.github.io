@@ -54,7 +54,7 @@ let Device = {
 };
 
 const getAspectRatio = () => {
-  return canvas.width / canvas.height;
+  return window.innerWidth / window.innerHeight;
 };
 
 // Get the distance between two points
@@ -180,6 +180,22 @@ const Cast = () => {
   getAspectRatio() <= 1
     ? (Device.phoneLayout = true)
     : (Device.phoneLayout = false);
+
+  if (Device.phoneLayout) {
+    for (
+      let i = 0;
+      i < document.getElementsByClassName("section").length;
+      i++
+    ) {
+      const element = document.getElementsByClassName("section")[i];
+      element.className = element.className.replace(/\bsection\b/g, "sPhone");
+    }
+  } else {
+    for (let i = 0; i < document.getElementsByClassName("sPhone").length; i++) {
+      const element = document.getElementsByClassName("sPhone")[i];
+      element.className = element.className.replace(/\bsPhone\b/g, "section");
+    }
+  }
 
   //#endregion Physics
 

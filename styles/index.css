@@ -13,8 +13,9 @@ a {
 
 hr {
   color: #373737;
-  top: 100vh;
   z-index: 160;
+  position: sticky;
+  top: 0px;
 }
 
 p {
@@ -98,6 +99,16 @@ span {
   display: grid;
   grid-template-columns: 15% auto 15%;
   width: 99vw;
+}
+
+.sPhone {
+  display: grid;
+  grid-template-columns: 10px auto 10px;
+  width: 99vw;
+}
+
+.sPhone p {
+  font-size: medium;
 }
 
 .entered {
