@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
       rel="stylesheet"
     />
-    <link href="styles/index.css" rel="stylesheet" />
+    <link href="https://www.movsisyan.info/styles/index.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -101,7 +101,15 @@
       <hr></hr>
       <div id="canvasHolder">
         <canvas id="canvas"></canvas>
-        <script src="scripts/index.js"></script>
+        <script src="https://movsisyan.info/scripts/index.js"></script>
+        <script>
+            let timestamps = [null, null, null, null, null]
+
+            let xhr
+            let enterID = 0
+
+            let start = new Date().getTime()
+        </script>
       </div>
       
       <div id="canvasTransition"></div>
@@ -110,12 +118,13 @@
         <div></div>
         <div>
           <article class="article">
+            <nav></nav>
             <h2>About me</h2>
             <p>
               Hey there, visitor! Let me introduce myself.<br>
-              My name is Mher and I'm 19 years old. I like tea, potatoes 
+              My name is Mher and I'm 20 years old. I like tea, potatoes 
               and learning new things. Besides that, I am a student at the 
-              <a href="https://www.aua.am/" target="_blank">American University of Armenia</a> 
+              <a href="https://movsisyan.info/?redir=https://www.aua.am/" target="_blank">American University of Armenia</a> 
               majoring in Data Science. I graduated from Yerevan State College of Light 
               industry, served in the army, and all of that is boring, but 
               wait until you see what the established Senior Software 
@@ -132,6 +141,7 @@
           <div style="margin: 0 0 150px 0;">
           </div>
           <article  class="article">
+            <nav></nav>
             <h2>Education</h2>
             <h5>American University of Armenia</h5>
             <h6>2018, 2020 - present</h6>
@@ -141,26 +151,26 @@
               and share new knowledge. I get to explore new perspectives with gen ed courses, 
               making me familiar with various cultures, sciences, and languages.
             </p>
-            <p style="font-size: small;"><a href="https://www.aua.am/" target="_blank">Click to visit their website.</a> </p>
+            <p style="font-size: small;"><a href="https://movsisyan.info/?redir=https://www.aua.am/" target="_blank">Click to visit their website.</a> </p>
             <h5>Yerevan State College of Light Industry</h5>
             <h6>2015 - 2018 (graduated)</h6>
             <p>
               Learning foundational micro/macroeconomics, sociology, finance, tax law, accounting, 
-              statistics, and marketing allows me to apply my skills to real, competitive environments.
+              and statistics allows me to apply my skills to real, competitive environments.
             </p>
-            <p style="font-size: small;"><a href="https://www.facebook.com/slic1929" target="_blank">Click to visit their page.</a> </p>
+            <p style="font-size: small;"><a href="https://movsisyan.info/?redir=https://www.facebook.com/slic1929" target="_blank">Click to visit their page.</a> </p>
           </article>
           <div style="margin: 0 0 150px 0;">
           </div>
           <article  class="article">
+            <nav></nav>
             <h3>Volunteering</h3>
             <h5>"Hans Christian Kofoed" Beneficent Foundation</h5>
             <h6>2016</h6>
             <p>
-              Volunteered at a homeless shelter to help and encourage the homeless. 
-              Everybody deserves hope and support.
+                Volunteered at a homeless shelter.
             </p>
-            <p style="font-size: small;"><a href="https://www.facebook.com/Kofoed-Armenia-118610755525300" target="_blank">Click to visit their page.</a> </p>
+            <p style="font-size: small;"><a href="https://movsisyan.info/?redir=https://www.facebook.com/Kofoed-Armenia-118610755525300" target="_blank">Click to visit their page.</a> </p>
             <h5>Wikimedia Armenia</h5>
             <h6>2017</h6>
             <p>
@@ -168,18 +178,26 @@
               with my camera, helped gather over 25,000 pictures of Armenian monuments, 
               and played a role in Armenia's participation in the "We Love Monuments" Wikimedia contest.
             </p>
-            <p style="font-size: small;"><a href="https://www.facebook.com/WikimediaArmenia" target="_blank">Click to visit their page.</a> </p>
+            <p style="font-size: small;"><a href="https://movsisyan.info/?redir=https://www.facebook.com/WikimediaArmenia" target="_blank">Click to visit their page.</a> </p>
           </article>
           <div style="margin: 0 0 150px 0;">
             <a class="projects">sneaky</a>
           </div>
           <article  class="article">
+            <nav></nav>
             <h2>Projects</h2>
-            <h5>This website</h5>
-            <h6>2020</h6>
+            <h5>"Amino" Live Reader Data Collection</h5>
+            <h6>2021 January</h6>
             <p>
-              Made with JavaScript, Html, CSS, designed by me to let you read this.
+              This project is built upon my previous "Movsisyan's Portfolio Website" project. It allows for live data collection regarding the page reader, including User-agent string, reading times, screen resolution and geolocation.
             </p>
+            <article>
+              <h5>This website</h5>
+              <h6>2020</h6>
+              <p>
+                Made with JavaScript, Html, CSS, designed by me to let you read this.
+              </p>
+            </article>
             <article>
             <h5>"Movsisyan's bot" telegram bot</h5>
             <h6>2020</h6>
@@ -189,8 +207,9 @@
               as well as report the current bitcoin price. This project displays my 
               ability to find and use various APIs using Python 3. 
             </p>
-            <p style="font-size: small;"><a href="https://t.me/MovsisyansBot/" target="_blank">@MovsisyansBot</a> </p>
-            </article><article>
+            <p style="font-size: small;"><a href="https://movsisyan.info/?redir=https://t.me/MovsisyansBot/" target="_blank">@MovsisyansBot</a> </p>
+            </article>
+            <article>
             <h5>"VioletRecon" desktop app</h5>
             <h6>2019</h6>
             <p>
@@ -202,7 +221,8 @@
               practice has been proven to be more than 900% efficient when 
               compared to manual use with default software.
             </p>
-            </article><article>
+            </article>
+            <article>
             <h5>"Vigil" forensics desktop app</h5>
             <h6>2019</h6>
             <p>
@@ -210,7 +230,8 @@
               past IO device use. This project helped me get an idea of what it is like 
               to work with a strict deadline.
             </p>
-            </article><article>
+            </article>
+            <article>
             <h5>.Net class libraries for AR5001 and AR2100 radio receivers</h5>
             <h6>2019</h6>
             <p>
@@ -219,7 +240,8 @@
               project. This provides an easy-to-use interface to work with the 
               particular radio receivers and build high-level apps.
             </p>
-            </article><article>
+            </article>
+            <article>
             <h5>"Beeper" team schedule desktop app</h5>
             <h6>2019</h6>
             <p>
@@ -228,20 +250,22 @@
               member and their task at a previously specified time. It is 
               written in C# with no network connection.
             </p>
-            </article><article>
-            <h5>.Net class library for signal direction finding via DFB1000B</h5>
+            </article>
+            <article>
+            <h5>.Net class library for signal direction finding via DFP1000B</h5>
             <h6>2019</h6>
             <p>
               This is a class library written in C# without a network connection. 
               The library provides a very simple way to work with and calculate 
               signal direction data using two radio receivers. This library 
-              proved to be very useful since it allowed higher lever software 
+              proved to be very useful since it allowed higher level software 
               to calculate the orientation of the antennae without the use of 
               a compass, determine where real sources of signals are compared 
               to reflections from large terrain objects, determine the speed 
               of a moving radio transmitter.
             </p>
-            </article><article>
+            </article>
+            <article>
             <h5>Automated file renamer</h5>
             <h6>2019</h6>
             <p>
@@ -249,17 +273,19 @@
               to rename large amounts of similar files in a specified pattern 
               and was also developed without an internet connection.
             </p>
-            </article><article>
+            </article>
+            <article>
             <h5>Morse code translator</h5>
             <h6>2019</h6>
             <p>
               This app is written in C# without an internet connection. 
               It takes textual input from the user and converts the text 
-              into morse code. After the conversion, the series of dots 
+              into Morse code. After the conversion, the series of dots 
               and dashes are emitted as sound waves.
             </p>
-            <p style="font-size: small;"><a href="https://github.com/MovsisyanM/MorseConsole" target="_blank">Click to visit GitHub repo</a> </p>
-            </article><article>
+            <p style="font-size: small;"><a href="https://movsisyan.info/?redir=https://github.com/MovsisyanM/MorseConsole" target="_blank">Click to visit GitHub repo</a> </p>
+            </article>
+            <article>
             <h5>"Logic cubed" team project</h5>
             <h6>2018 (Intro to Computer Science final project)</h6>
             <p>
@@ -271,10 +297,11 @@
               and interpretation of code. This project helped me better 
               my teamwork skills.
             </p>
-            <p style="font-size: small;"><a href="https://app.movsisyan.info/LogicCubed/" target="_blank">Click to visit project</a></p>
-            </article><article>
+            <p style="font-size: small;"><a href="https://movsisyan.info/?redir=https://app.movsisyan.info/LogicCubed/" target="_blank">Click to visit project</a></p>
+            </article>
+            <article>
             <h5>Cube-Js</h5>
-            <h6>2019</h6>
+            <h6>2018</h6>
             <p>
               The letter "M" that you see at the top of this page is a 
               modification of this project. The projection of lower-dimensional 
@@ -282,7 +309,8 @@
               what this project suggests is much more, it suggests that 
               I possess the ability to express math as code.
             </p>
-            </article><article>
+            </article>
+            <article>
             <h5>Tax calculator</h5>
             <h6>2016</h6>
             <p>
@@ -292,7 +320,8 @@
               It was a calculator that did my homework for a year by 
               calculating the salaries of workers after tax.
             </p>
-            </article><article>
+            </article>
+            <article>
             <h5>"Pewds vs Zombers" Videogame</h5>
             <h6>2014 November</h6>
             <p>
@@ -314,28 +343,194 @@
               from the players of my game and seeing that I liked 
               coding, I started to learn software engineering.
             </p>
-            <p style="font-size: small;"><a href="https://gamejolt.com/games/Pewdszombers/39061" target="_blank">Click to visit game page</a></p>
+            <p style="font-size: small;"><a href="https://movsisyan.info/?redir=https://gamejolt.com/games/Pewdszombers/39061" target="_blank">Click to visit the game page</a></p>
             </article>
           </article>
           <article class="article">
+            <nav></nav>
             <h3>Contact Info and Links</h3>
             <p>
               Email: mher@movsisyan.info
             </p>
             <p>
-              <a href="https://github.com/MovsisyanM" target="_blank">Go to GitHub</a>
+              <a href="https://movsisyan.info/?redir=https://github.com/MovsisyanM" target="_blank">Go to GitHub</a>
             </p>
             <p>
-              <a href="https://www.linkedin.com/in/mher-movsisyan-b77592197/" target="_blank">Go to LinkedIn</a>
+              <a href="https://movsisyan.info/?redir=https://www.linkedin.com/in/mher-movsisyan-b77592197/" target="_blank">Go to LinkedIn</a>
             </p>
             <p>
-              <a href="https://www.instagram.com/movsisyan_mh/" target="_blank">Go to Instagram</a>
+              <a href="https://movsisyan.info/?redir=https://www.instagram.com/movsisyan_mh/" target="_blank">Go to Instagram</a>
             </p>
           </article>
         </div>
       </div>
     </div>
 
-    <script src="scripts/entered.js"></script>
+    <script>
+"use strict";
+!(function (e) {
+  "function" == typeof define && define.amd
+    ? define(e)
+    : "undefined" != typeof module && module.exports
+    ? (module.exports = e())
+    : (window.enterView = e.call(this));
+})(function () {
+  var e = function (e) {
+    function n() {
+      E =
+        window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        function (e) {
+          return setTimeout(e, 1e3 / 60);
+        };
+    }
+    function t() {
+      if (y && "number" == typeof y) {
+        var e = Math.min(Math.max(0, y), 1);
+        return F - e * F;
+      }
+      return F;
+    }
+    function o() {
+      var e = document.documentElement.clientHeight,
+        n = window.innerHeight || 0;
+      F = Math.max(e, n);
+    }
+    function r() {
+      L = !1;
+      var e = t();
+      (M = M.filter(function (n) {
+        var t = n.getBoundingClientRect(),
+          o = t.top,
+          r = t.bottom,
+          i = t.height,
+          s = o < e,
+          u = r < e;
+        if (s && !n.__ev_entered) {
+          if ((m(n), (n.__ev_progress = 0), h(n, n.__ev_progress), q))
+            return !1;
+        } else !s && n.__ev_entered && ((n.__ev_progress = 0), h(n, n.__ev_progress), g(n));
+        if (s && !u) {
+          var d = (e - o) / i;
+          (n.__ev_progress = Math.min(1, Math.max(0, d))),
+            h(n, n.__ev_progress);
+        }
+        return (
+          s &&
+            u &&
+            1 !== n.__ev_progress &&
+            ((n.__ev_progress = 1), h(n, n.__ev_progress)),
+          (n.__ev_entered = s),
+          !0
+        );
+      })),
+        M.length || window.removeEventListener("scroll", i, !0);
+    }
+    function i() {
+      L || ((L = !0), E(r));
+    }
+    function s() {
+      o(), r();
+    }
+    function u() {
+      o(), r();
+    }
+    function d(e) {
+      for (var n = e.length, t = [], o = 0; o < n; o += 1) t.push(e[o]);
+      return t;
+    }
+    function f(e) {
+      var n =
+        arguments.length > 1 && void 0 !== arguments[1]
+          ? arguments[1]
+          : document;
+      return "string" == typeof e
+        ? d(n.querySelectorAll(e))
+        : e instanceof NodeList
+        ? d(e)
+        : e instanceof Array
+        ? e
+        : void 0;
+    }
+    function c() {
+      M = f(v);
+    }
+    function a() {
+      window.addEventListener("resize", s, !0),
+        window.addEventListener("scroll", i, !0),
+        window.addEventListener("load", u, !0),
+        s();
+    }
+    function _() {
+      return v
+        ? (c(),
+          M && M.length
+            ? (n(), a(), void r())
+            : (console.error("no selector elements found"), !1))
+        : (console.error("must pass a selector"), !1);
+    }
+    var v = e.selector,
+      l = e.enter,
+      m = void 0 === l ? function () {} : l,
+      w = e.exit,
+      g = void 0 === w ? function () {} : w,
+      p = e.progress,
+      h = void 0 === p ? function () {} : p,
+      x = e.offset,
+      y = void 0 === x ? 0 : x,
+      A = e.once,
+      q = void 0 !== A && A,
+      E = null,
+      L = !1,
+      M = [],
+      F = 0;
+    _();
+  };
+  return e;
+});
+
+enterView({
+  selector: "article",
+  enter: (el) => {
+    el.classList.add("entered");
+  },
+});
+
+enterView({
+  selector: "nav",
+  enter: (el) => {
+    if(!(el.classList.contains("reported"))){
+      el.classList.add("reported");
+      
+      timestamps[enterID] = (Math.floor(((new Date().getTime()) - start) / 100) / 10);
+      enterID++;
+      
+
+      xhr = new XMLHttpRequest();
+      let rstring = "https://www.movsisyan.info/?bobbing=1";
+      rstring += "&screenX=" + screen.width.toString();
+      rstring += "&screenY=" + screen.height.toString();
+      rstring += "&ts=" + JSON.stringify(timestamps).replaceAll('"', "");
+      xhr.open("GET", rstring, true);
+      xhr.onload = () => {
+        // future use maybe? cute doggos are cute
+      }
+      xhr.send();
+    }
+  },
+});
+
+enterView({
+  selector: "canvas",
+  enter: (el) => {
+    if(!(el.classList.contains("entered"))){
+      el.classList.add("entered");
+    }
+  },
+});
+
+    </script>
   </body>
 </html>

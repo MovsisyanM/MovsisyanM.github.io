@@ -224,8 +224,8 @@ document.addEventListener("touchmove", onSlide, false);
 
 // This gets hoisted
 function onMUpdate(e) {
-  Details.dy += (e.pageX - mouseLocation[0]) * 0.0002;
-  Details.dx += (e.pageY - mouseLocation[1]) * 0.0002;
+  Details.dy += Math.min(0.4, (e.pageX - mouseLocation[0]) * 0.0002);
+  Details.dx += Math.min(0.4, (e.pageY - mouseLocation[1]) * 0.0002);
 
   // Account the last recorded mouse position
   mouseLocation = [e.pageX, e.pageY];
@@ -239,8 +239,8 @@ function onWUpdate(e) {
 }
 
 function onSlide(e) {
-  Details.dy += (e.touches[0].clientX - mouseLocation[0]) * 0.002;
-  Details.dx += (e.touches[0].clientY - mouseLocation[1]) * 0.002;
+  Details.dy += Math.min(0.4, (e.touches[0].clientX - mouseLocation[0]) * 0.002);
+  Details.dx += Math.min(0.4, (e.touches[0].clientY - mouseLocation[1]) * 0.002);
 
   // Account the last recorded mouse position
   mouseLocation = [e.touches[0].clientX, e.touches[0].clientY];

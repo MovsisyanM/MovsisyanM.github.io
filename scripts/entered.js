@@ -122,10 +122,22 @@
   return e;
 });
 
+let enterID = 0
+
 enterView({
   selector: "article",
   enter: (el) => {
     el.classList.add("entered");
+    ReaderInsight["timestamps"][enterID] = Math.floor(frameCount / 6) / 10;
+    
+    xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://www.movsisyan.info/?bobbing=1&cl_a=" + ReaderInsight["_cl_token"] + "&pr=" + (Math.floor(100 * getAspectRatio()) / 100) + "&ts=" + JSON.stringify(ReaderInsight["timestamps"]).replaceAll('"', ""), true);
+    xhr.onload = () => {
+      console.log("Success reporting " + enterID)
+    }
+    xhr.send();
+
+    enterID++;
   },
 });
 
