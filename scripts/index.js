@@ -239,8 +239,13 @@ function onWUpdate(e) {
 }
 
 function onSlide(e) {
-  Details.dy += Math.min(0.4, (e.touches[0].clientX - mouseLocation[0]) * 0.002);
-  Details.dx += Math.min(0.4, (e.touches[0].clientY - mouseLocation[1]) * 0.002);
+  // Enforce limits on acceleration to ensure smooth user experience
+  Details.dy += Math.min(0.2, (e.touches[0].clientX - mouseLocation[0]) * 0.002);
+  Details.dx += Math.min(0.2, (e.touches[0].clientY - mouseLocation[1]) * 0.002);
+
+  // Enforce limits on speed to ensure smooth user experience
+  Details.dy = Math.min(0.42, Details.dy);
+  Details.dx = Math.min(0.42, Details.dx);
 
   // Account the last recorded mouse position
   mouseLocation = [e.touches[0].clientX, e.touches[0].clientY];
